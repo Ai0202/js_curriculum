@@ -1,0 +1,181 @@
+body{
+    line-height:1.0;
+    font-size:14px;
+}
+
+h1 {
+    font-size: 40px;
+    margin: 40px 0;
+    text-align: center;
+}
+
+h2 {
+    font-size: 30px;
+    margin: 20px 0 20px 20px;
+}
+
+ul {
+    list-style:none;
+    margin: 10px;
+}
+
+.btn {
+    background-color: #ddd;
+    display: inline-block;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* ボタンのサイズを変更 */
+.change-btn-size {
+    text-align: center;
+}
+
+.change-btn-size .large-btn {
+    padding: 15px 30px;
+}
+/* ボタンのサイズを変更ここまで */
+
+/* タブメニュー  */
+.tab ul li {
+    float: left;
+    padding:5px 15px 5px 15px;
+    border: 1px #ddd solid;
+
+    color: #999;
+    height:15px;
+    line-height:15px;
+    margin: 5px 0px 0px 5px;
+    cursor:pointer;
+}
+
+.tab ul li.selected {
+    color: #000;
+    height:20px;
+    line-height:20px;
+    margin: 0px 0px 0px 5px;
+    cursor:default;
+}
+
+#textArea{
+    position:relative;
+    top:-1px;
+    z-index:-1;
+    clear:left;
+    background-color:#ffd;
+    margin:0px 10px 10px 10px;
+    padding:10px;
+    height:100px;
+    border: 1px #ddd solid;
+}
+
+.yellow{
+    background-color:#ffd;
+}
+.pink{
+    background-color:#fdf;
+}
+.blue{
+    background-color:#dff;
+}
+
+ul li.yellow.selected{
+    border-bottom: 1px #ffd solid;
+}
+ul li.pink.selected{
+    border-bottom: 1px #fdf solid;
+}
+ul li.blue.selected{
+    border-bottom: 1px #dff solid;
+}
+
+/* タブメニュー ここまで */
+
+
+/* モーダル */
+.modal {
+    text-align: center;
+    position: relative;
+}
+
+.modal .btn {
+    background-color: #ddd;
+    display: inline-block;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.modalwin {
+    position: fixed;
+    width: 600px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 #000;
+    z-index: 1;
+}
+
+.modalwin dl {
+    padding: 0px 10px;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.modalwin h1 {
+    background: #ededed;
+    padding: 20px;
+    border-radius: 5px 5px 0 0;
+    font-size: 1.2em;
+    margin-top: 0;
+    text-align: center;
+}
+
+.modalwin-contents {
+    padding: 5px;
+}
+
+.modalwin-contents img {
+    margin: 0 0 1em 0;
+    float: left;
+    width: 30%;
+    height: 30%;
+}
+
+.modalwin-contents p {
+    margin: 0 0 1em 0;
+    line-height: 1.8em;
+}
+
+#shade {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #999;
+    opacity: 0.9;
+    z-index: 1;
+}
+
+
+/* モーダルここまで */
+
+
+
+/* swiper */
+.swiper-container {
+    width: 600px;
+    height: 300px;
+}
+/* swiperここまで */
