@@ -1,57 +1,36 @@
 $(function(){
-	//ボタンのサイズ変更
-	$('#js-hover-btn').on('click', function() {
-		$(this).addClass('large-btn');
-	});
+  //ボタンのサイズ変更
+  $('#js-click-btn').on('click', function() {
+    $(this).addClass('large-btn');
+  });
 
-	// タブメニュー
-	$(".tab > ul").on("click", "li",function() {
-		$("li.selected").removeClass("selected");
-		$(this).addClass("selected");
-		myID = this.id.split("_")[1];
-		$("#textArea>div").hide();
-		$("#text_" + myID).show();
+  //ボタンの色変更
+  $('#js-hover-btn').mouseover(function() {
+    $(this).addClass('hoge');
+  }).mouseleave(function() {
+    $(this).removeClass('hoge');
+  });
 
-		var myColor = $(this).css("background-color");
-		$("#textArea").css("background-color", myColor);
-	});
+  //要素の表示切り替え
+  $('#js-show-btn').on('click', function() {
+    $('#js-target-element').fadeIn(1000);
+  });
 
-	$("#tab_1").trigger("click");
+  $('#js-hide-btn').on('click', function() {
+    $('#js-target-element').fadeOut(2000);
+  });
 
+  //要素の追加
+  // 要素の前後(外)に追加
+  $('#js-add-btn').on('click', function() {
+    $(this).before('<li class="btn">ボタンの前に追加</li>');
+    $(this).after('<li class="btn">ボタンの後ろに追加</li>');
+  });
 
-	// モーダル
-	$(".modal .btn").on("click", function() {
-		function showModal(event) {
-
-		            var $shade = $('<div></div>');
-		            $shade
-		                .attr('id', 'shade')
-		                .on('click', hideModal);
-
-
-		            var $modalWin = $('#modalwin');
-		            var $window = $(window);
-		            var posX = ($window.width() - $modalWin.outerWidth()) / 2;
-		            var posY = ($window.height() - $modalWin.outerHeight()) / 2;
-
-		            $modalWin
-		                .before($shade)
-		                .css({left: posX, top: posY})
-		                .removeClass('hide')
-		                .addClass('show')
-		                .on('click', 'button', function () {
-		                    hideModal();
-		                });
-		        }
-
-		        function hideModal() {
-		            $('#shade').remove();
-		            $('#modalwin')
-		                .removeClass('show')
-		                .addClass('hide');
-		        }
-
-		        $('.modal .btn').on('click', showModal);
-	});
+  //要素の前後(中)に追加
+  $('#js-add-btn2').on('click', function() {
+    $(this).prepend('<li>前</li>');
+    $(this).append('<li>後</li>');
+  });
 
 });
