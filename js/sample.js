@@ -6,9 +6,9 @@ $(function(){
 
   //ボタンの色変更
   $('#js-hover-btn').mouseover(function() {
-    $(this).addClass('hoge');
+    $(this).addClass('opacity');
   }).mouseleave(function() {
-    $(this).removeClass('hoge');
+    $(this).removeClass('opacity');
   });
 
   //要素の表示切り替え
@@ -31,6 +31,12 @@ $(function(){
   $('#js-add-btn2').on('click', function() {
     $(this).prepend('<li>前</li>');
     $(this).append('<li>後</li>');
+  });
+
+  //toggleメニュー
+  $('.js-toggle').on('click', function() {
+    $(this).toggleClass('on');
+    $(this).siblings().slideToggle();
   });
 
 });
